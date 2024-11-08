@@ -8,32 +8,6 @@
 import MapKit
 
 
-extension MKMapItem {
-    private struct AssociatedKeys {
-        static var customerKey = "customerKey"
-    }
-
-    // Getter và setter sử dụng đối tượng liên kết (associated object)
-}
-
-
-
-//extension MKMapItem {
-////    func getCustomer(customer: Customer) -> Customer {
-////        return customer
-////    }
-//    
-//    var customer: Customer {
-//        get {
-//            return self.customer
-//        }
-//        
-//        set {
-//            self.customer = newValue
-//        }
-//    }
-//}
-
 extension CLLocationCoordinate2D: Equatable {
     public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
         lhs.latitude == rhs.latitude
@@ -91,7 +65,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 //        let destinatonPlacemark = MKPlacemark(coordinate: to)
         
         let distance = MKMapPoint(from).distance(to: MKMapPoint(to))
-        print(distance)
+//        print(distance)
 //        
 //        let request = MKDirections.Request()
 //        request.source = MKMapItem(placemark: sourcePlacemark)
